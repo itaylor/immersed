@@ -1,0 +1,18 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "module": "esnext",
+    "outDir": "buildo",                        /* Redirect output structure to the directory. */
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "build"
+  ]
+}

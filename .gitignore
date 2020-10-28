@@ -1,0 +1,14 @@
+node_modules
+build/
+.vscode
+cypress/screenshots
+
+#-- Npm package locks (we use Yarn.lock instead)
+package-lock.json
+
+#---- Yarn w/o Zero-Installs ----------------------------------------------------
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+.pnp.*
