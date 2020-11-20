@@ -1,7 +1,7 @@
 {
-  "name": "immerzion",
+  "name": "immersed",
   "version": "1.0.0",
-  "description": "Simple immer-based application state managment",
+  "description": "Immer based application state management",
   "main": "build/index.js",
   "author": "ian.b.taylor@gmail.com",
   "license": "MIT",
@@ -22,5 +22,8 @@
   },
   "workspaces": [
     "todomvc"
-  ]
+  ],
+  "resolutions": {
+    "immerzion": "portal:/Users/itaylor/os/immerzion"
+  }
 }

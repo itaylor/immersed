@@ -1,5 +1,5 @@
 import { produce as immerProduce } from 'immer';
-import { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import devtool from './devtool';
 
 export type SelectorFn<S, X> = (state: S) => X;
