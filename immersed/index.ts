@@ -1,6 +1,4 @@
 import { produce as immerProduce } from 'immer';
-import React, { useState, useEffect } from 'react'; 
-import devtool from './devtool';
 
 export type SelectorFn<S, X> = (state: S) => X;
 export type ActivationFn<X> = (selectedState: X) => unknown;
@@ -10,8 +8,14 @@ type SelectorActivator<S, X> = {
   activationFn: ActivationFn<X>;
 };
 export type Recipe<S> = (state: S) => S | void
+export type ImmersedAPI<S> = {
+  addListener: <X>(selectorFn: SelectorFn<S,X>, activationFn: ActivationFn<X>) => number;
+  removeListener: (id: number) => void;
+  update: (recipe: Recipe<S>) => void;
+  getState: () => S;
+}
 
-export function init<S>(initialState: S) {
+export function init<S>(initialState: S): ImmersedAPI<S> {
   let current: S = initialState;
   let currentId = 0;
   let selectors: SelectorActivator<S, any>[] = [];
@@ -21,25 +25,12 @@ export function init<S>(initialState: S) {
     selectorFn: SelectorFn<S, X>,
     activationFn: ActivationFn<X>
   ) {
-    console.log("addListener", selectors.length);
     const id = currentId++;
     selectors.push({ selectorFn, id, activationFn });
     return id;
   }
   function removeListener(id: number) {
-    console.log("removeListener", id, selectors.length);
     selectors = selectors.filter((s) => s.id !== id);
-  }
-  function useSelector<X>(selector: SelectorFn<S, X>) {
-    const selectorVal = selector(current);
-    const [state, setState] = useState(selectorVal);
-    useEffect(() => {
-      const id = addListener<X>(selector, setState);
-      return () => {
-        removeListener(id);
-      };
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
-    return state;
   }
   function update(recipe: Recipe<S>, fromDevTool=false): void {
     const last = current;
@@ -66,18 +57,17 @@ export function init<S>(initialState: S) {
       }
     });
   };
+  function getState(): S {
+    return current;
+  }
   const api = 
   {
-    getState() {
-      return current;
-    },
+    getState,
     update,
     addListener,
     removeListener,    
-    useSelector,
-    enableDevTool: () => {
-      devTool = devtool<S>(update, initialState)
-    },
   };
   return api; 
 }
+
+export default init;

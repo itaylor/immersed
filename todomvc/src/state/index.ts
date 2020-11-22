@@ -1,4 +1,4 @@
-import { init } from 'immerzion';
+import { init } from 'immersed-react';
 
 export type Todo = {
   id: string,

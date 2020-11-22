@@ -1,10 +1,10 @@
-import { Recipe } from './index';
+import { Recipe } from 'immersed';
 
 declare global {
   interface Window { __REDUX_DEVTOOLS_EXTENSION__: any; }
 } 
 
-export default function devTool<S>(update: (recipe: Recipe<S>, fromDevTool: boolean) => any, state: S, options?: any):
+export default function devTool<S>(update: (recipe: Recipe<S>) => any, state: S, options?: any):
  ((state: S) => void )| undefined
 {
   const defaultOptions = {
@@ -34,7 +34,7 @@ export default function devTool<S>(update: (recipe: Recipe<S>, fromDevTool: bool
     }
   });
   function setStateFromDevTool(state: S) {
-    update(() => state, true);
+    update(() => state);
   }
   function stateHandler(state: S) {
     dt.send(getFunctionNameFromStackTrace(4), state);

@@ -12,3 +12,4 @@ package-lock.json
 !.yarn/plugins
 !.yarn/sdks
 .pnp.*
+.yarn/cache
