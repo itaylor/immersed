@@ -14,11 +14,12 @@ Both of these are patterns to achieve mostly the same goal, to provide a structu
 
 Setup:
 ```sh
-npx create-react-app cra
-npm install --save immersed-react typescript
+npx create-react-app cra --template typescript
+cd cra
+npm install --save immersed-react
 ```
 
-Create a new file `src/State.ts`.  In this file we'll declare the type of our application state, and initialize immersed with an initial state.
+Create a new file `src/State.ts`.  In this file we'll declare the type of our application state, and initialize `immersed` with an initial state.
 ```ts
 import { init } from 'immersed-react';
 export type MyState = {
@@ -34,7 +35,7 @@ export { useSelector, update, addListener, removeListener };
 
 In the `src/App.tsx` file, import `useSelector` and `update` from `src/State.ts`
 ```ts
-import { useSelector, update } from 'src/State';
+import { useSelector, update } from './State';
 ```
 At the top of the `App` function, add your `useSelector` call.  We'll pass it a selector that returns the `clickCount` from the state store.
 ```ts
@@ -92,7 +93,7 @@ npm start
 ```
 Create react app will start up, and you'll have a button beneath the Learn react link that you can click to update. 
 
-This small example is not any better than using the `useState` hook, since there's only one place in the code that reads and updates the state.  However, unlike with `useState` this pattern can used from anywhere with the application, react component or otherwise to safely share that piece of state, and whenever the `clickCount` property is changed via a call to `update` any/all components that use `useSelector` will rerender with the new value.
+This small example is not any better than using the `useState` hook, since there's only one place in the code that reads and updates the state.  However, unlike with `useState` this pattern can used from anywhere with the application, React component or otherwise to safely share that piece of state, and whenever the `clickCount` property is changed via a call to `update` any/all components that use `useSelector` will rerender with the new value.
 
 ## Beyond just updating React Components
 Immersed is not tied to React.  You can use `update` and `addListener` from anywhere.
