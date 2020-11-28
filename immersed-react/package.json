@@ -1,6 +1,6 @@
 {
   "name": "immersed-react",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Immer based application state management",
   "main": "build/index.js",
   "author": "ian.b.taylor@gmail.com",
@@ -19,7 +19,7 @@
     "typescript": "^4.0.3"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp ../README.md README.md",
     "prepack": "yarn build"
   }
 }
