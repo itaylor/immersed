@@ -1,7 +1,7 @@
 import { produce as immerProduce } from 'immer';
 
 export type SelectorFn<S, X> = (state: S) => X;
-export type ActivationFn<X> = (selectedState: X) => unknown;
+export type ActivationFn<X> = (selectedState: X, prevSelectedState?: X) => unknown;
 type SelectorActivator<S, X> = {
   selectorFn: SelectorFn<S, X>;
   id: number;
@@ -42,18 +42,18 @@ export function init<S>(initialState: S): ImmersedAPI<S> {
       devTool(current);
     }
     selectors.forEach((s) => {
-      const oldSelector = s.selectorFn(last);
-      const newSelector = s.selectorFn(current);
+      const oldSelectorValue = s.selectorFn(last);
+      const newSelectorValue = s.selectorFn(current);
       if (process.env.NODE_ENV === "development") {
-        const newSelectorAgain = s.selectorFn(current);
-        if (newSelectorAgain !== newSelector) {
+        const newSelectorValueAgain = s.selectorFn(current);
+        if (newSelectorValueAgain !== newSelectorValue) {
           throw new Error(
             `Bad selector function.  This function produces different output with the same input. Consider memoizing its results if it is doing computation.  Function text: ${s.selectorFn.toString()}`
           );
         }
       }
-      if (oldSelector !== newSelector) {
-        s.activationFn(newSelector);
+      if (newSelectorValue !== oldSelectorValue) {
+        s.activationFn(newSelectorValue, oldSelectorValue);
       }
     });
   };
