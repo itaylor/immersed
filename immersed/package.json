@@ -1,6 +1,6 @@
 {
   "name": "immersed",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.4",
   "description": "Immer based application state management",
   "main": "build/index.js",
   "author": "ian.b.taylor@gmail.com",
@@ -15,6 +15,7 @@
     "typescript": "^4.0.3"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepack": "yarn build"
   }
 }
