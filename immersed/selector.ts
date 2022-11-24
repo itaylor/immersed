@@ -1,13 +1,13 @@
-export function createSelector<Q extends ParamsArray,
-    P extends SelectorArray<Q>,
-    C extends (...args: [...ExtractReturnType<Q, P>]) => any>
-    (selectors: [...P], combiner: C) {    
-    let lastSelected: ExtractReturnType<Q, P>;
+export function createSelector<P extends ParamsArray,
+    S extends SelectorArray<P>,
+    C extends (...args: [...ExtractReturnType<P, S>]) => any>
+    (selectors: [...S], combiner: C) {    
+    let lastSelected: ExtractReturnType<P, S>;
     let lastCombined: ReturnType<C>;    
-    return function selector(...args: LongestTuple<ExtractParameters<P>>): ReturnType<C> {
-        const curr = selectors.map(s => s(...args as [...Q])) as [...ExtractReturnType<Q, P>];
+    return function selector(...args: LongestTuple<ExtractParameters<S>>): ReturnType<C> {
+        const curr = selectors.map(s => s(...args as [...P])) as [...ExtractReturnType<P, S>];
         
-        if (same(lastSelected as any[], curr)) {
+        if (same(lastSelected as unknown[], curr)) {
             return lastCombined;
         }
         lastCombined = combiner(...curr);
@@ -35,8 +35,8 @@ type Selector<T extends ParamsArray> = (...args: [...T]) => any;
 export type SelectorArray<T extends ParamsArray> = ReadonlyArray<Selector<T>>;
 type ParamsArray = ReadonlyArray<any>;
 
-export type ExtractReturnType<P extends ParamsArray, T extends readonly Selector<P>[]> = {
-    [index in keyof T]: T[index] extends T[number] ? ReturnType<T[index]> : never
+export type ExtractReturnType<P extends ParamsArray, S extends readonly Selector<P>[]> = {
+    [index in keyof S]: S[index] extends S[number] ? ReturnType<S[index]> : never
 }
 type AnyFunction = (...args: any[]) => any;
 
