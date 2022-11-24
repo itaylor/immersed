@@ -1,6 +1,6 @@
 {
   "name": "immersed",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0",
   "description": "Immer based application state management",
   "main": "build/index.js",
   "author": "ian.b.taylor@gmail.com",
@@ -12,7 +12,7 @@
   "devDependencies": {
     "@types/node": "^14.14.9",
     "jest": "^26.6.3",
-    "typescript": "^4.0.3"
+    "typescript": "^4.8.0"
   },
   "scripts": {
     "build": "tsc && cp ../README.md README.md",

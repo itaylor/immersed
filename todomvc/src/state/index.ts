@@ -17,6 +17,6 @@ const initialState: TodoState = {
   filter: 'All',
 }
 
-const { useSelector, update, addListener, removeListener, enableDevTool } = init<TodoState>(initialState);
+const { useSelector, update, addListener, removeListener, enableDevTool, createStateSelector } = init<TodoState>(initialState);
 enableDevTool();
-export { useSelector, update, addListener, removeListener };
+export { useSelector, update, addListener, removeListener, createStateSelector };

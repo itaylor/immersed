@@ -1,4 +1,5 @@
 import { produce as immerProduce } from 'immer';
+import { createSelector, SelectorArray, ExtractReturnType, LongestTuple, ExtractParameters } from './selector';
 
 export type SelectorFn<S, X> = (state: S) => X;
 export type ActivationFn<X> = (selectedState: X, prevSelectedState?: X) => unknown;
@@ -13,6 +14,9 @@ export type ImmersedAPI<S> = {
   removeListener: (id: number) => void;
   update: (recipe: Recipe<S>) => void;
   getState: () => S;
+  createStateSelector: <P extends SelectorArray<[S]>,
+    C extends (...args: [...ExtractReturnType<[S], P>]) => any>
+    (selectors: [...P], combiner: C) => (...args: LongestTuple<ExtractParameters<P>>) => ReturnType<C>;
 }
 
 export function init<S>(initialState: S): ImmersedAPI<S> {
@@ -60,12 +64,19 @@ export function init<S>(initialState: S): ImmersedAPI<S> {
   function getState(): S {
     return current;
   }
+  function createStateSelector<
+    P extends SelectorArray<[S]>,
+    C extends (...args: [...ExtractReturnType<[S], P>]) => any>
+    (selectors: [...P], combiner: C) {
+        return createSelector(selectors, combiner);
+    }
   const api = 
   {
     getState,
     update,
     addListener,
-    removeListener,    
+    removeListener,
+    createStateSelector,  
   };
   return api; 
 }
