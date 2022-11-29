@@ -40,7 +40,7 @@ export function init<S>(initialState: S): ImmersedReactAPI<S> {
     }
     return true;
   }
-  
+
   const reactApi: ImmersedReactAPI<S> = {
     ...api,
     useSelector,
