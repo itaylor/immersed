@@ -8,6 +8,7 @@
     "test": "yarn build && concurrently --kill-others 'yarn serve' 'yarn cypress'",
     "cypress": "cypress run"
   },
+  "type": "module",
   "dependencies": {
     "immersed-react": "workspace:*",
     "react": "^18.2.0",

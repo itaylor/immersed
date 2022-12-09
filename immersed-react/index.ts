@@ -1,6 +1,6 @@
 import { init as immersedInit, ImmersedAPI, SelectorFn, Recipe } from 'immersed';
 import { useState, useEffect } from 'react';
-import devtool from './devtool';
+import devtool from './devtool.js';
 
 type ImmersedReactAPI<S> = ImmersedAPI<S> & {
   useSelector: <X> (selector: SelectorFn<S, X>) => X;

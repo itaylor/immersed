@@ -6,11 +6,17 @@
   "author": "ian.b.taylor@gmail.com",
   "repository": "https://github.com/itaylor/immersed",
   "license": "MIT",
+  "type": "module",
+  "exports": "./build/index.js",
+  "engines": {
+    "node": ">=16.0"
+  },
   "dependencies": {
     "immer": "^8.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
+    "mocha": "^10.1.0",
     "mocha-ui-jest": "^0.4.0",
     "typescript": "^4.8.0"
   },

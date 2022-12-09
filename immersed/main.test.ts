@@ -1,4 +1,4 @@
-import init from './index';
+import init from './index.js';
 import 'mocha-ui-jest';
 import { verify } from 'crypto';
 

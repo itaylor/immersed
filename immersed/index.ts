@@ -1,5 +1,5 @@
 import { produce as immerProduce } from 'immer';
-import { createSelector, SelectorArray, ExtractReturnType, LongestTuple, ExtractParameters } from './selector';
+import { createSelector, SelectorArray, ExtractReturnType, LongestTuple, ExtractParameters } from './selector.js';
 
 export type SelectorFn<S, X> = (state: S) => X;
 export type ActivationFn<X> = (selectedState: X, prevSelectedState?: X) => unknown;
