@@ -4,8 +4,8 @@
   "scripts": {
     "start": "parcel serve src/index.html",
     "build": "parcel build src/index.html",
-    "serve": "http-server -p 1234 dist/",
-    "test": "yarn build && concurrently --kill-others 'yarn serve' 'yarn cypress'",
+    "serve": "http-server --silent -p 1234 dist/",
+    "test": "start-server-and-test 'yarn serve' http://127.0.0.1:1234 'yarn cypress'",
     "cypress": "cypress run"
   },
   "type": "module",
@@ -18,11 +18,11 @@
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "concurrently": "^7.6.0",
     "cypress": "^11.2.0",
     "http-server": "^14.1.1",
     "parcel": "^2.8.0",
     "process": "^0.11.10",
+    "start-server-and-test": "^1.15.1",
     "typescript": "^4.8.0"
   }
 }

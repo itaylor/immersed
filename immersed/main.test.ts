@@ -1,6 +1,5 @@
 import init from './index.js';
 import 'mocha-ui-jest';
-import { verify } from 'crypto';
 
 describe('API shape', () => {
     test('init function and API shape',  () => {
