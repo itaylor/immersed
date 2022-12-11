@@ -1,0 +1,10 @@
+{
+    "extends": [
+      "config:base"
+    ],
+    "autodiscover": true,
+    "packageRules": [{
+        "matchUpdateTypes": ["*"],
+        "automerge": true
+    }]
+}
