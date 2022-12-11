@@ -1110,7 +1110,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.14.9":
+"@types/node@npm:*":
   version: 14.14.9
   resolution: "@types/node@npm:14.14.9"
   checksum: fbda42840aadc5b979f438a2e4c79c1d85d16222d758e58f7a2355a94b06be9da6b2b35603e0daeac115c69d3e3b334d03a5da40ab9c5ba48b75a3946a9854d8
@@ -3384,7 +3384,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "immersed-monorepo@workspace:."
   dependencies:
-    "@types/node": ^14.14.9
+    "@types/node": ^18.0.0
     "@types/react": ^18.0.0
     process: ^0.11.10
     ts-node: ^10.9.1
