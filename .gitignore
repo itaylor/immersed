@@ -13,3 +13,5 @@ package-lock.json
 !.yarn/sdks
 .pnp.*
 .yarn/cache
+.parcel-cache
+todomvc/build

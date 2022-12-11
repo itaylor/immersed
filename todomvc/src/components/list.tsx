@@ -1,14 +1,16 @@
 import React, { useRef } from 'react';
 import { Item } from './item';
-import { useSelector, update, TodoState, Todo, FilterType } from '../state';
-import { createSelector } from 'reselect';
-const visbleTodoSelector = createSelector<TodoState, Todo[], FilterType, Todo[]>((s) => s.todos, (s) => s.filter, (todos, filter) => {
-  if (filter === 'All') {
-    return todos;
-  } 
-  const wantsCompleted = (filter === 'Completed');
-  return todos.filter(t => t.completed === wantsCompleted);
-});
+import { useSelector, update, createStateSelector } from '../state';
+const visbleTodoSelector = createStateSelector(
+  [(s) => s.todos, (s) => s.filter],
+  (todos, filter) => {
+    if (filter === 'All') {
+      return todos;
+    } 
+    const wantsCompleted = (filter === 'Completed');
+    return todos.filter(t => t.completed === wantsCompleted);
+  }
+);
 
 export function List() {
   const visibleTodos = useSelector(visbleTodoSelector);  

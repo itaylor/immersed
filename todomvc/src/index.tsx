@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom';
 import { App } from './components/app';
 import 'todomvc-app-css/index.css';
-render(<App />, document.getElementsByTagName('app-root')[0]);
+const root = createRoot(document.getElementsByTagName('app-root')[0]);
+root.render(<React.StrictMode><App/></React.StrictMode>);
