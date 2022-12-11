@@ -15,7 +15,8 @@
   },
   "scripts": {
     "build": "yarn workspaces foreach run build",
-    "test": "yarn workspaces foreach run test"
+    "test": "yarn workspaces foreach run test",
+    "bump-minor": "cd immersed && yarn version patch && cd ../immersed-react && yarn version patch"
   },
   "workspaces": [
     "immersed",
