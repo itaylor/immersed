@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "@types/react": "^17.0.0",
+    "@types/react": "^18.0.0",
     "mocha": "^10.1.0",
     "mocha-ui-jest": "^0.4.0",
     "react": "^18.2.0",
