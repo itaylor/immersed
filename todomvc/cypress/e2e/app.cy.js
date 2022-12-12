@@ -473,10 +473,12 @@ describe('TodoMVC - React', function () {
 
   context('Clear completed button', function () {
     beforeEach(function () {
-      cy.createDefaultTodos().as('todos')
+      cy.createDefaultTodos();
     })
 
     it('should display the correct text', function () {
+      cy.get('.todo-list li').as('todos');
+
       cy.get('@todos')
       .eq(0)
       .find('.toggle')
@@ -486,6 +488,8 @@ describe('TodoMVC - React', function () {
     })
 
     it('should remove completed items when clicked', function () {
+      cy.get('.todo-list li').as('todos');
+
       cy.get('@todos')
       .eq(1)
       .find('.toggle')
@@ -503,6 +507,7 @@ describe('TodoMVC - React', function () {
     })
 
     it('should be hidden when there are no items that are completed', function () {
+      cy.get('.todo-list li').as('todos');
       cy.get('@todos')
       .eq(1)
       .find('.toggle')
@@ -530,8 +535,11 @@ describe('TodoMVC - React', function () {
         .and('not.have.class', 'completed')
       }
 
-      cy.createTodo(TODO_ITEM_ONE).as('firstTodo')
-      cy.createTodo(TODO_ITEM_TWO).as('secondTodo')
+      cy.createTodo(TODO_ITEM_ONE);
+      cy.createTodo(TODO_ITEM_TWO);
+      cy.get('.todo-list li:nth-of-type(1)').as('firstTodo');
+      cy.get('.todo-list li:nth-of-type(2)').as('secondTodo');
+   
       cy.get('@firstTodo')
       .find('.toggle')
       .check()
@@ -550,10 +558,11 @@ describe('TodoMVC - React', function () {
     // https://on.cypress.io/within
 
     beforeEach(function () {
-      cy.createDefaultTodos().as('todos')
+      cy.createDefaultTodos()
     })
 
     it('should allow me to display active items', function () {
+      cy.get('.todo-list li').as('todos');
       cy.get('@todos')
       .eq(1)
       .find('.toggle')
@@ -573,6 +582,8 @@ describe('TodoMVC - React', function () {
     })
 
     it('should respect the back button', function () {
+      cy.get('.todo-list li').as('todos');
+
       cy.get('@todos')
       .eq(1)
       .find('.toggle')
@@ -594,6 +605,8 @@ describe('TodoMVC - React', function () {
     })
 
     it('should allow me to display completed items', function () {
+      cy.get('.todo-list li').as('todos');
+
       cy.get('@todos')
       .eq(1)
       .find('.toggle')
@@ -607,6 +620,8 @@ describe('TodoMVC - React', function () {
     })
 
     it('should allow me to display all items', function () {
+      cy.get('.todo-list li').as('todos');
+
       cy.get('@todos')
       .eq(1)
       .find('.toggle')
