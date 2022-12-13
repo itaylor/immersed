@@ -15,6 +15,10 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
+      - name: Setup .yarnrc.yml
+        run: |
+          yarn config set -H 'npmRegistries["https://registry.npmjs.org"].npmAuthToken' '${NODE_AUTH_TOKEN:-}'
+          yarn config set -H 'npmRegistries["https://registry.npmjs.org"].npmAlwaysAuth' 'true'
       - run: yarn install
       - run: yarn build
       - run: yarn test
