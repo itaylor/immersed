@@ -19,6 +19,7 @@ jobs:
         run: |
           yarn config set -H 'npmRegistries["https://registry.npmjs.org"].npmAuthToken' '${NODE_AUTH_TOKEN:-}'
           yarn config set -H 'npmRegistries["https://registry.npmjs.org"].npmAlwaysAuth' 'true'
+          cat ~/.yarnrc.yml
       - run: yarn install
       - run: yarn build
       - run: yarn test
