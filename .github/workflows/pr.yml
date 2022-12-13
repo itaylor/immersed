@@ -1,11 +1,9 @@
-name: Build, test, publish main
+name: Build, test
 
-on:
-  push:
-    branches: [main]
+on: [pull_request]
 
 jobs:
-  build-test-publish:
+  build-test:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -17,6 +15,3 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: yarn test
-      - run: yarn pub
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

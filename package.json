@@ -16,7 +16,8 @@
   "scripts": {
     "build": "yarn workspaces foreach run build",
     "test": "yarn workspaces foreach run test",
-    "bump-minor": "cd immersed && yarn version patch && cd ../immersed-react && yarn version patch"
+    "bump-minor": "cd immersed && yarn version patch && cd ../immersed-react && yarn version patch",
+    "pub": "node ./publish-checker.cjs ./immersed/package.json || npm publish --workspace immersed && node ./publish-checker.cjs ./immersed-react/package.json || npm publish --workspace immersed-react"
   },
   "workspaces": [
     "immersed",

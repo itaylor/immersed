@@ -1,5 +1,7 @@
 name: Renovate
-on: [push, pull_request]
+on: 
+  schedule:
+    - cron: "*/10 * * * *"
 jobs:
   renovate:
     runs-on: ubuntu-latest
