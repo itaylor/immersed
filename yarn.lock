@@ -3373,10 +3373,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"immer@npm:^9.0.0":
-  version: 9.0.16
-  resolution: "immer@npm:9.0.16"
-  checksum: e9a5ca65c929b329da7a3b7beccf7984271cda7bdd47b2cab619eac3277dcd56598c211b55cc340786b6eff0c06652ac018808d9fd744443f06882364dece6bc
+"immer@npm:^10.0.0":
+  version: 10.0.3
+  resolution: "immer@npm:10.0.3"
+  checksum: 76acabe6f40e752028313762ba477a5d901e57b669f3b8fb406b87b9bb9b14e663a6fbbf5a6d1ab323737dd38f4b2494a4e28002045b88948da8dbf482309f28
   languageName: node
   linkType: hard
 
@@ -3413,7 +3413,7 @@ __metadata:
   resolution: "immersed@workspace:immersed"
   dependencies:
     "@types/node": ^18.0.0
-    immer: ^9.0.0
+    immer: ^10.0.0
     mocha: ^10.1.0
     mocha-ui-jest: ^0.4.0
     typescript: ^4.8.0
