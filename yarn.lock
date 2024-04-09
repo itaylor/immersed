@@ -1124,10 +1124,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.0.0":
-  version: 18.11.11
-  resolution: "@types/node@npm:18.11.11"
-  checksum: c4b1176a8f1714a3ee3fc2a5e1d568b0cd50209000282db5c68154b3c975952928dbb834ef3a0ce55bd7b345ae29f2cbf4a34635a070294d135a24254231386a
+"@types/node@npm:^20.0.0":
+  version: 20.12.6
+  resolution: "@types/node@npm:20.12.6"
+  dependencies:
+    undici-types: ~5.26.4
+  checksum: d16272276349244b1b6f15b0a23ce380efe3dfe46ace1ae37d58e791a8e53d832a2dc72d1afe01d7e5bb0ec1fba70ddd58b1da87921ec913e600331b3b906be9
   languageName: node
   linkType: hard
 
@@ -3384,7 +3386,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "immersed-monorepo@workspace:."
   dependencies:
-    "@types/node": ^18.0.0
+    "@types/node": ^20.0.0
     "@types/react": ^18.0.0
     process: ^0.11.10
     ts-node: ^10.9.1
@@ -3396,7 +3398,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "immersed-react@workspace:immersed-react"
   dependencies:
-    "@types/node": ^18.0.0
+    "@types/node": ^20.0.0
     "@types/react": ^18.0.0
     immersed: "workspace:*"
     mocha: ^10.1.0
@@ -3412,7 +3414,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "immersed@workspace:immersed"
   dependencies:
-    "@types/node": ^18.0.0
+    "@types/node": ^20.0.0
     immer: ^9.0.0
     mocha: ^10.1.0
     mocha-ui-jest: ^0.4.0
@@ -6393,6 +6395,13 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 67ca21a387c0572f1c04936e638dde7782c5aa520c3754aadc7cc9b7c915da9ebc3e27c601bfff4ccb7d7264e82dce6d277ada82ec09dc75024349e0ef64926d
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~5.26.4":
+  version: 5.26.5
+  resolution: "undici-types@npm:5.26.5"
+  checksum: 3192ef6f3fd5df652f2dc1cd782b49d6ff14dc98e5dced492aa8a8c65425227da5da6aafe22523c67f035a272c599bb89cfe803c1db6311e44bed3042fc25487
   languageName: node
   linkType: hard
 
