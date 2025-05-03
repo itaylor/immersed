@@ -1159,16 +1159,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.0":
-  version: 18.0.9
-  resolution: "@types/react-dom@npm:18.0.9"
-  dependencies:
-    "@types/react": "*"
-  checksum: e744e3feba25fc43733289d4df4d9c0e59fcca7f34e8c89d75f81a339accb2bd70236d69382d47d2c0ad06a1529b2e56aa6171fe175854d60e07156ddceedfcb
+"@types/react-dom@npm:^19.0.0":
+  version: 19.1.3
+  resolution: "@types/react-dom@npm:19.1.3"
+  peerDependencies:
+    "@types/react": ^19.0.0
+  checksum: 3cde94c87a053978e6d4b0ad2d13aedec236aaa3caf3477f28a5f0d0d8806ce20bd6b1825e0128be011d700de578b93049f10627f21ec61589009bf39495d808
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.0.0":
+"@types/react@npm:^18.0.0":
   version: 18.0.25
   resolution: "@types/react@npm:18.0.25"
   dependencies:
@@ -6256,7 +6256,7 @@ __metadata:
   resolution: "todomvc-immersed@workspace:todomvc"
   dependencies:
     "@types/react": ^18.0.0
-    "@types/react-dom": ^18.0.0
+    "@types/react-dom": ^19.0.0
     cypress: ^12.0.0
     http-server: ^14.1.1
     immersed-react: "workspace:*"
