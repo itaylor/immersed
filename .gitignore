@@ -15,3 +15,5 @@ package-lock.json
 .yarn/cache
 .parcel-cache
 todomvc/build
+
+.DS_Store
