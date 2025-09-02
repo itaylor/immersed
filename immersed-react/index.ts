@@ -1,5 +1,5 @@
-import { init as immersedInit, ImmersedAPI, SelectorFn, Recipe } from 'immersed';
-import { useState, useEffect } from 'react';
+import { init as immersedInit, ImmersedAPI, SelectorFn, Recipe  } from 'immersed';
+import { useSyncExternalStoreWithSelector } from 'use-sync-external-store/with-selector';
 import devtool from './devtool.js';
 
 type ImmersedReactAPI<S> = ImmersedAPI<S> & {
@@ -11,16 +11,18 @@ export function init<S>(initialState: S): ImmersedReactAPI<S> {
   const api = immersedInit<S>(initialState);
   const { addListener, removeListener, update, getState } = api;
 
+  const subscribe = (onStoreChange: () => void) => {
+    const id = addListener((s: S) => s, () => onStoreChange());
+    return () => removeListener(id);
+  };
+
   function useSelector<X>(selector: SelectorFn<S, X>) {
-    const selectorVal = selector(getState());
-    const [state, setState] = useState(selectorVal);
-    useEffect(() => {
-      const id = addListener<X>(selector, setState);
-      return () => {
-        removeListener(id);
-      };
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
-    return state;
+    return useSyncExternalStoreWithSelector<S, X>(
+      subscribe,
+      getState,
+      getState,
+      selector
+    );
   }
   let isDevToolUpdate = false;
 

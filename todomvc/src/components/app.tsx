@@ -7,6 +7,7 @@ import { List } from './list';
 import { Footer } from './footer';
 import { Copyright } from './copyright';
 
+'use client';
 export function App() {
   const todos = useSelector(state => state.todos);
   return (

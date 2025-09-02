@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "tsc && cp ../README.md README.md",
-    "test": "mocha -r mocha-ui-jest --ui jest **/*.test.js",
+    "test": "mocha -r mocha-ui-jest --ui jest  --ignore '**/node_modules/**' **/*.test.js",
     "prepack": "yarn build"
   }
 }

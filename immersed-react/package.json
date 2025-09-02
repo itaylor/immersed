@@ -1,6 +1,6 @@
 {
   "name": "immersed-react",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "Immer based application state management",
   "main": "build/index.js",
   "author": "ian.b.taylor@gmail.com",
@@ -12,14 +12,16 @@
     "node": ">=16.0"
   },
   "dependencies": {
-    "immersed": "workspace:*"
+    "immersed": "workspace:*",
+    "use-sync-external-store": "^1.5.0"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=18.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "@types/react": "^18.0.0",
+    "@types/react": "^19.0.0",
+    "@types/use-sync-external-store": "^1.5.0",
     "mocha": "^10.1.0",
     "mocha-ui-jest": "^0.4.0",
     "react": "^18.2.0",
@@ -27,7 +29,7 @@
   },
   "scripts": {
     "build": "tsc && cp ../README.md README.md",
-    "test": "mocha -r mocha-ui-jest --ui jest **/*.test.js",
+    "test": "mocha -r mocha-ui-jest --ui jest --ignore '**/node_modules/**' **/*.test.js",
     "prepack": "yarn build"
   }
 }

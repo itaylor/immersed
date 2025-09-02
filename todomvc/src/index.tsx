@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoot } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { App } from './components/app';
 import 'todomvc-app-css/index.css';
 const root = createRoot(document.getElementsByTagName('app-root')[0]);
