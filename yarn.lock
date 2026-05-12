@@ -78,9 +78,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/request@npm:^3.0.10":
-  version: 3.0.10
-  resolution: "@cypress/request@npm:3.0.10"
+"@cypress/request@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@cypress/request@npm:4.0.0"
   dependencies:
     aws-sign2: "npm:~0.7.0"
     aws4: "npm:^1.8.0"
@@ -99,8 +99,7 @@ __metadata:
     safe-buffer: "npm:^5.1.2"
     tough-cookie: "npm:^5.0.0"
     tunnel-agent: "npm:^0.6.0"
-    uuid: "npm:^8.3.2"
-  checksum: 10/23c86075f5fbbd4a56403cb98dbce92b2bc33cbb0ec5779d7cb45c9ad50b5d056ff73037f11680842bb2bc4f2b79b995d91880ca7e9a893b8be650d93fad2e33
+  checksum: 10/61298f7dfe3945392ee21f6c469378109bc4ffccffbb87ef7fca6be3c84513df84c18eac6fd724714fa40755b8ad03ed2c721833009b3e7b66ba90a2bcc6eb07
   languageName: node
   linkType: hard
 
@@ -2342,10 +2341,10 @@ __metadata:
   linkType: hard
 
 "cypress@npm:^15.0.0":
-  version: 15.14.2
-  resolution: "cypress@npm:15.14.2"
+  version: 15.15.0
+  resolution: "cypress@npm:15.15.0"
   dependencies:
-    "@cypress/request": "npm:^3.0.10"
+    "@cypress/request": "npm:^4.0.0"
     "@cypress/xvfb": "npm:^1.2.4"
     "@types/sinonjs__fake-timers": "npm:8.1.1"
     "@types/sizzle": "npm:^2.3.2"
@@ -2387,7 +2386,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10/1bec4c0d3313490f8c748d7173d125ea2657d37019a9e4a2cdf89feee06a1d101ce3432a555adb5dacaa1b6e2535f78b7a83bb53ade220b9cae19b2ce4927cb6
+  checksum: 10/289d28665f332f227eae879252982c5185b85765818534c859715e9de34d048514a9dac735a9fe7f7b70ff20209d0e9cf0ee8a096208447a1526174cb4ecbf5c
   languageName: node
   linkType: hard
 
@@ -6797,15 +6796,6 @@ __metadata:
   bin:
     uuid: ./bin/uuid
   checksum: 10/4f2b86432b04cc7c73a0dd1bcf11f1fc18349d65d2e4e32dd0fc658909329a1e0cc9244aa93f34c0cccfdd5ae1af60a149251a5f420ec3ac4223a3dab198fb2e
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^8.3.2":
-  version: 8.3.2
-  resolution: "uuid@npm:8.3.2"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 10/9a5f7aa1d6f56dd1e8d5f2478f855f25c645e64e26e347a98e98d95781d5ed20062d6cca2eecb58ba7c84bc3910be95c0451ef4161906abaab44f9cb68ffbdd1
   languageName: node
   linkType: hard
 
