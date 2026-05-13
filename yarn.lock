@@ -6155,8 +6155,8 @@ __metadata:
   linkType: hard
 
 "start-server-and-test@npm:^3.0.0":
-  version: 3.0.4
-  resolution: "start-server-and-test@npm:3.0.4"
+  version: 3.0.5
+  resolution: "start-server-and-test@npm:3.0.5"
   dependencies:
     arg: "npm:5.0.2"
     bluebird: "npm:3.7.2"
@@ -6165,12 +6165,12 @@ __metadata:
     execa: "npm:5.1.1"
     lazy-ass: "npm:1.6.0"
     tree-kill: "npm:1.2.2"
-    wait-on: "npm:9.0.6"
+    wait-on: "npm:9.0.10"
   bin:
     server-test: src/bin/start.js
     start-server-and-test: src/bin/start.js
     start-test: src/bin/start.js
-  checksum: 10/b12d3d7422f0df9c37df2b290fe464fc58ff806e5d85dd25a37edab5a201e7e869ce0b3a8250ea1a94baf8f2e76c545860a51ccc297c1c05ef6f3310b4151fac
+  checksum: 10/02437e0411c70ef534f790d6579a24e604ca1cd2b6afddec61252abd061f7f926872ba5c42793fa3899ff360fd87725ade75e2308e2f5073388e0bd580ae9c59
   languageName: node
   linkType: hard
 
@@ -6827,9 +6827,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wait-on@npm:9.0.6":
-  version: 9.0.6
-  resolution: "wait-on@npm:9.0.6"
+"wait-on@npm:9.0.10":
+  version: 9.0.10
+  resolution: "wait-on@npm:9.0.10"
   dependencies:
     axios: "npm:^1.16.0"
     joi: "npm:^18.2.1"
@@ -6838,7 +6838,7 @@ __metadata:
     rxjs: "npm:^7.8.2"
   bin:
     wait-on: bin/wait-on
-  checksum: 10/9ee7af967faaad2349fb7751b0e89cb897f34ae7969d3db1750f6e1cf3b0cdaa7469f22afe42774a440cdcbe3d8ec0b862dbde0c6ba42c84a55d095967f675e8
+  checksum: 10/948c17eef62155b33e1d2194e897b0a90a033096d53928299993fc3c184d2fc365fb30bcef2a31129812c678759336b2f5078ad7905c262f30312097cadb6d25
   languageName: node
   linkType: hard
 
