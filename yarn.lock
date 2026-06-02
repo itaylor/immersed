@@ -1817,7 +1817,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bluebird@npm:3.7.2, bluebird@npm:^3.7.2":
+"bluebird@npm:^3.7.2":
   version: 3.7.2
   resolution: "bluebird@npm:3.7.2"
   checksum: 10/007c7bad22c5d799c8dd49c85b47d012a1fe3045be57447721e6afbd1d5be43237af1db62e26cb9b0d9ba812d2e4ca3bac82f6d7e016b6b88de06ee25ceb96e7
@@ -6107,11 +6107,10 @@ __metadata:
   linkType: hard
 
 "start-server-and-test@npm:^3.0.0":
-  version: 3.0.5
-  resolution: "start-server-and-test@npm:3.0.5"
+  version: 3.0.6
+  resolution: "start-server-and-test@npm:3.0.6"
   dependencies:
     arg: "npm:5.0.2"
-    bluebird: "npm:3.7.2"
     check-more-types: "npm:2.24.0"
     debug: "npm:4.4.3"
     execa: "npm:5.1.1"
@@ -6122,7 +6121,7 @@ __metadata:
     server-test: src/bin/start.js
     start-server-and-test: src/bin/start.js
     start-test: src/bin/start.js
-  checksum: 10/02437e0411c70ef534f790d6579a24e604ca1cd2b6afddec61252abd061f7f926872ba5c42793fa3899ff360fd87725ade75e2308e2f5073388e0bd580ae9c59
+  checksum: 10/e2e16a5d815b96e5875eb23b5729a1ae0fb4bee6fb7f2c4c400a8d04b0aed61365429d6ee99b4b0027e23218af0cce831271ec3d629aa4a983949bba7567dbb9
   languageName: node
   linkType: hard
 
