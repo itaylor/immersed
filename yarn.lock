@@ -4237,10 +4237,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lazy-ass@npm:1.6.0":
-  version: 1.6.0
-  resolution: "lazy-ass@npm:1.6.0"
-  checksum: 10/3969ebef060b6f665fc78310ec769f7d2945db2d5af2b6663eda1bc9ec45c845deba9c4a3f75f124ce2c76fedf56514a063ee5c2affc8bc94963fbbddb442a88
+"lazy-ass@npm:2.0.3":
+  version: 2.0.3
+  resolution: "lazy-ass@npm:2.0.3"
+  checksum: 10/2fc4b9b89b9ad705e5ee1f7733fef5b21c23f76bbfaa01f33cd64a1ef6a799973675b77cc243abfa1afb46337c189bbe1adce5c404f850fcd7af57ac19f4455c
   languageName: node
   linkType: hard
 
@@ -6107,21 +6107,21 @@ __metadata:
   linkType: hard
 
 "start-server-and-test@npm:^3.0.0":
-  version: 3.0.6
-  resolution: "start-server-and-test@npm:3.0.6"
+  version: 3.0.7
+  resolution: "start-server-and-test@npm:3.0.7"
   dependencies:
     arg: "npm:5.0.2"
     check-more-types: "npm:2.24.0"
     debug: "npm:4.4.3"
     execa: "npm:5.1.1"
-    lazy-ass: "npm:1.6.0"
+    lazy-ass: "npm:2.0.3"
     tree-kill: "npm:1.2.2"
     wait-on: "npm:9.0.10"
   bin:
     server-test: src/bin/start.js
     start-server-and-test: src/bin/start.js
     start-test: src/bin/start.js
-  checksum: 10/e2e16a5d815b96e5875eb23b5729a1ae0fb4bee6fb7f2c4c400a8d04b0aed61365429d6ee99b4b0027e23218af0cce831271ec3d629aa4a983949bba7567dbb9
+  checksum: 10/7853a31183329bd7aa62d229f262dcaec07d711cb971ecf7aaea26e5021affc597e29447ec4d29fdfdfd03cd614544aec89f174ddd488c327f6e30f693771bc1
   languageName: node
   linkType: hard
 
