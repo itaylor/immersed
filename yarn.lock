@@ -1362,21 +1362,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^26.0.0":
   version: 26.6.5
   resolution: "@types/node@npm:26.6.5"
   dependencies:
     undici-types: "npm:~8.9.0"
   checksum: 10/03780cc68280b566af47c0f673318e665258dbdcc953737a83c11593424d55aecb8b2642a573da33f76cb4dd5457379548388b78ab284cb3b762030e5d58b252
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^24.3.0":
-  version: 24.19.2
-  resolution: "@types/node@npm:24.19.2"
-  dependencies:
-    undici-types: "npm:>=7.24.0 <7.24.7"
-  checksum: 10/5bc31df093f2866db0a2f9df0a1e99c2a46c3154ca2dc62ee14bde7af216d6361e4737e1023880921007ccb326b8559980e239e18a6fa927cda507da9383225c
   languageName: node
   linkType: hard
 
@@ -3620,7 +3611,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "immersed-monorepo@workspace:."
   dependencies:
-    "@types/node": "npm:^24.3.0"
+    "@types/node": "npm:^26.0.0"
     "@types/react": "npm:^19.1.12"
     process: "npm:^0.11.10"
     ts-node: "npm:^10.9.2"
@@ -3632,7 +3623,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "immersed-react@workspace:immersed-react"
   dependencies:
-    "@types/node": "npm:^24.3.0"
+    "@types/node": "npm:^26.0.0"
     "@types/react": "npm:^19.1.12"
     "@types/use-sync-external-store": "npm:^1.5.0"
     immersed: "workspace:*"
@@ -3650,7 +3641,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "immersed@workspace:immersed"
   dependencies:
-    "@types/node": "npm:^24.3.0"
+    "@types/node": "npm:^26.0.0"
     immer: "npm:^11.0.0"
     mocha: "npm:^11.7.2"
     mocha-ui-jest: "npm:^0.4.0"
@@ -6676,13 +6667,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10/696e1b017bc2635f4e0c94eb4435357701008e2f272f553d06e35b494b8ddc60aa221145e286c28ace0c89ee32827a28c2040e3a69bdc108b1a5dc8fb40b72e3
-  languageName: node
-  linkType: hard
-
-"undici-types@npm:>=7.24.0 <7.24.7":
-  version: 7.24.6
-  resolution: "undici-types@npm:7.24.6"
-  checksum: 10/defc9538b952e3c15b8526596c591f7c1f0c7605ad27a2b7feddbea7ef2e3003f3eda2cdb051a3cb1a2185e3893100fd9cb925c799db99d48131ea63b5233d10
   languageName: node
   linkType: hard
 
